@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistaComandes[
+    <!ELEMENT llistaComandes (comanda*)>
+    <!ELEMENT comanda (numeroSerie, quantitat, pes?)>
+    <!ELEMENT numeroSerie (#PCDATA)>
+    <!ELEMENT quantitat (#PCDATA)>
+    <!ELEMENT pes (#PCDATA)>
+]>
+
+<llistaComandes>
+    <comanda>
+        <numeroSerie>1234abc</numeroSerie>
+        <quantitat>3</quantitat>
+        <pes>45Kg</pes>
+    </comanda>
+    <comanda>
+        <numeroSerie>5678def</numeroSerie>
+        <quantitat>5</quantitat>
+    </comanda>
+</llistaComandes>

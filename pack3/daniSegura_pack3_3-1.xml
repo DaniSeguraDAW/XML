@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistavendes [
+    <!ELEMENT llistavendes (vendes+)>
+    <!ELEMENT vendes (import, comprador, venedor, data?, codiFactura)>
+    <!ELEMENT import (#PCDATA)>
+    <!ELEMENT comprador (#PCDATA)>
+    <!ELEMENT venedor (#PCDATA)>
+    <!ELEMENT data (#PCDATA)>
+    <!ELEMENT codiFactura (#PCDATA)>
+]>
+
+<llistavendes>
+    <vendes>
+        <import>240</import>
+        <comprador>Comprador 1</comprador>
+        <venedor>Vendedor 1</venedor>
+        <data>10/12/2023</data>
+        <codiFactura>1234abc</codiFactura>
+    </vendes>
+    <vendes>
+        <import>500</import>
+        <comprador>Comprador 2</comprador>
+        <venedor>Vendedor 2</venedor>
+        <data>03/1/2024</data>
+        <codiFactura>5678def</codiFactura>
+    </vendes>
+</llistavendes>

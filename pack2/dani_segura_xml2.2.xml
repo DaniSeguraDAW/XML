@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE arxiu [
+  <!ELEMENT arxiu ((venda | compra)+)>
+  <!ELEMENT venda (titolsVenuts+, totalLlibres, lliurat?, import)>
+  <!ELEMENT titolsVenuts (#PCDATA)>
+  <!ELEMENT totalLlibres (#PCDATA)>
+  <!ELEMENT lliurat (#PCDATA)>
+  <!ELEMENT import (#PCDATA)>
+  <!ATTLIST import moneda CDATA #REQUIRED>
+  <!ELEMENT compra (dia, mes, any)>
+  <!ELEMENT dia (#PCDATA)>
+  <!ELEMENT mes (#PCDATA)>
+  <!ELEMENT any (#PCDATA)>
+]>
+
+<arxiu>
+  <venda>
+    <titolsVenuts>Llibre 1</titolsVenuts>
+    <titolsVenuts>Llibre 2</titolsVenuts>
+    <totalLlibres>2</totalLlibres>
+    <lliurat>si</lliurat>
+    <import moneda="EUR">40</import>
+  </venda>
+  <venda>
+    <titolsVenuts>Llibre 3</titolsVenuts>
+    <totalLlibres>3</totalLlibres>
+    <import moneda="EUR">60</import>
+  </venda>
+  <compra>
+    <dia>10</dia>
+    <mes>01</mes>
+    <any>2021</any>
+  </compra>
+</arxiu>
+
+

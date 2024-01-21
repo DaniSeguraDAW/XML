@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entrega[
+    <!ELEMENT entrega (lot+)>
+    <!ELEMENT lot (palet+)>
+    <!ELEMENT palet (caixes, contingut, pes, fromaManipulacio)>
+    <!ELEMENT caixes (#PCDATA)>
+    <!ELEMENT pes (#PCDATA)>
+    <!ELEMENT fromaManipulacio (#PCDATA)>
+    <!ELEMENT contingut (nomComponent, procedencia*, numeroSerie, pesIndividual,UnitatPes?)>
+    <!ELEMENT nomComponent (#PCDATA)>
+    <!ELEMENT procedencia (#PCDATA)>
+    <!ELEMENT numeroSerie (#PCDATA)>
+    <!ELEMENT pesIndividual (#PCDATA)>
+    <!ELEMENT UnitatPes (#PCDATA)>
+]>
+
+<entrega>
+    <lot>
+        <palet>
+            <caixes>10</caixes>
+            <contingut>
+                <nomComponent>Nom component 1</nomComponent>
+                <procedencia>Espanya</procedencia>
+                <procedencia>Portugal</procedencia>
+                <numeroSerie>1234abc</numeroSerie>
+                <pesIndividual>4</pesIndividual>
+                <UnitatPes>Kg</UnitatPes>
+            </contingut>
+            <pes>40</pes>
+            <fromaManipulacio>fragil</fromaManipulacio>
+        </palet>
+    </lot>
+</entrega>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viatges>
+  <viatge>
+    <nom>Dani Segura Camps</nom>
+    <inici>2023-09-12</inici>
+    <final>2023-09-20</final>
+    <origen>Catalunya</origen>
+    <desti ciutat="Tarragona" hotel="Hotel panchu" nits="6"></desti>
+    <preu>400€</preu>
+  </viatge>
+  <viatge>
+    <nom>Luca Segui Enrich</nom>
+    <inici>2023-01-12</inici>
+    <final>2023-01-20</final>
+    <origen>Andorra</origen>
+    <desti ciutat="Pas de la casa" hotel="Hotel peri" nits="6"></desti>
+    <preu>500€</preu>
+  </viatge>
+  <viatge>
+    <nom>Arnau Marqués Abelló</nom>
+    <inici>2023-04-12</inici>
+    <final>2023-04-20</final>
+    <origen>Groenlandia</origen>
+    <desti ciutat="Ittoqqortoormiit" hotel="Hotel barrera" nits="6"></desti>
+    <preu>2000€</preu>
+  </viatge>
+</viatges>

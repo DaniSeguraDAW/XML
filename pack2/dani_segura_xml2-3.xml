@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tractors[
+  <!ELEMENT tractors (tractor+)>
+  <!ELEMENT tractor (component+)>
+  <!ELEMENT component (nomFabricant, dataEntrega, fragil, pes, nombreSerie, kmmaxis?)>
+  <!ELEMENT nomFabricant (#PCDATA)>
+  <!ELEMENT dataEntrega (dia?, mes, any)>
+  <!ELEMENT dia (#PCDATA)>
+  <!ELEMENT mes (#PCDATA)>
+  <!ELEMENT any (#PCDATA)>
+  <!ELEMENT pes (#PCDATA)>
+  <!ATTLIST pes unitatPes (quilos | grams)  "quilos">
+  <!ELEMENT fragil (#PCDATA)>
+  <!ATTLIST fragil esFragil (si | no) "si">
+  <!ELEMENT nombreSerie (#PCDATA)>
+  <!ELEMENT kmmaxis (#PCDATA)>
+  ]>
+
+  <tractors>
+  <tractor>
+    <component>
+      <nomFabricant>Fabricant 1</nomFabricant>
+      <dataEntrega>
+        <mes>Enero</mes>
+        <any>2022</any>
+      </dataEntrega>
+      <fragil esFragil="si"></fragil>
+      <pes unitatPes="quilos">150</pes>
+      <nombreSerie>1234</nombreSerie>
+      <kmmaxis>5000</kmmaxis>
+    </component>
+  </tractor>
+
+  <tractor>
+    <component>
+      <nomFabricant>Fabricant 2</nomFabricant>
+      <dataEntrega>
+        <dia>15</dia>
+        <mes>Febrero</mes>
+        <any>2022</any>
+      </dataEntrega>
+      <fragil esFragil="no"></fragil>
+      <pes unitatPes="grams">80000</pes>
+      <nombreSerie>5678</nombreSerie>
+    </component>
+  </tractor>
+</tractors>
