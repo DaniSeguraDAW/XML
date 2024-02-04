@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<informacio-personal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="daniSegura_pack5_5-1_xsd.xsd">
+  <ciutat>Roma</ciutat>
+  <data-de-naixament>1996-12-18</data-de-naixament>
+  <hora>18.29:45</hora>
+  <nota>7.5</nota>
+  <apte>*true</apte>
+</informacio-personal>
