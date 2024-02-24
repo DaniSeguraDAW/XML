@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="asseguranca_cotxe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="asseguranca" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="asseguradora" type="xs:string" />
+                            <xs:element name="geocobertura" type="xs:string" />
+                            <xs:element name="cobrament">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="financament" type="xs:string" />
+                                        <xs:element name="mensualitat" type="xs:string" />
+                                        <xs:element name="mensualitativa" type="xs:string" />
+                                        <xs:element name="anual" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="en" use="required" fixed="Euro" />
+                                    <xs:attribute name="mensual" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="promocions">
+                                <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                        <xs:element name="descompteonline" minOccurs="0" type="xs:string" />
+                                        <xs:element name="descompteedat" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:attribute name="edat" type="xs:integer" use="required" />
+                                                <xs:attribute name="import" type="xs:integer" />
+                                                <xs:attribute name="percentatge" type="xs:integer" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="nouclient" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer" use="required" />
+                        <xs:attribute name="denominacio" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

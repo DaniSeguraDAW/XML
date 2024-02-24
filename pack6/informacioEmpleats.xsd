@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="gDayType">
+        <xs:restriction base="xs:gDay"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="seuType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Madrid"/>
+            <xs:enumeration value="Barcelona"/>
+            <xs:enumeration value="València"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="titolType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="nivell" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="empleats">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element name="empleat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nom" type="xs:string"/>
+                            <xs:element name="data_inici_contracte">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dia" type="gDayType"/>
+                                        <xs:element name="mes" type="xs:gMonth"/>
+                                        <xs:element name="any" type="xs:gYear"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="lloc" type="xs:string"/>
+                            <xs:element name="llocs_anteriors" type="xs:string" minOccurs="0"/>
+                            <xs:element name="cap_directe" type="xs:IDREF"/>
+                            <xs:element name="sou" type="xs:decimal"/>
+                            <xs:element name="titols_academics" type="titolType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="seu" type="seuType"/>
+                            <xs:element name="observacions" type="xs:string" minOccurs="0"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

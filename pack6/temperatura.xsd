@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="dateType">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="temperatureType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-50"/>
+      <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="incidentNameType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="fred"/>
+      <xs:enumeration value="neu"/>
+      <xs:enumeration value="pluja"/>
+      <xs:enumeration value="calor"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="severityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="alta"/>
+      <xs:enumeration value="mitjana"/>
+      <xs:enumeration value="baixa"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="registre_temperatura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="provincia" type="xs:string"/>
+        <xs:element name="data" type="dateType"/>
+        <xs:element name="temperatura_minima" type="temperatureType"/>
+        <xs:element name="temperatura_maxima" type="temperatureType"/>
+        <xs:element name="incidencies">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="incidencia" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="nom" type="incidentNameType"/>
+                  <xs:attribute name="severitat" type="severityType"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
