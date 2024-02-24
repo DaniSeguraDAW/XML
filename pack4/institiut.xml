@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistacursos SYSTEM "institut.dtd">
+<llistacursos>
+    <curs>
+        <alumnes>
+            <alumne>
+                <dni>12345678A</dni>
+                <nom>Joan</nom>
+                <cognom>Marí</cognom>
+                <cognom2>Martínez</cognom2>
+                <assignatures>
+                    <assignatura codi="MAT101">
+                        <nom>Matemàtiques</nom>
+                        <professor>
+                            <nrp>987654321</nrp>
+                            <nom>Marta</nom>
+                            <cognom>Garcia</cognom>
+                        </professor>
+                    </assignatura>
+                    <assignatura codi="CAT102">
+                        <nom>Català</nom>
+                        <professor>
+                            <nrp>123456789</nrp>
+                            <nom>Pere</nom>
+                            <cognom>Vidal</cognom>
+                        </professor>
+                    </assignatura>
+                </assignatures>
+            </alumne>
+        </alumnes>
+    </curs>
+</llistacursos>

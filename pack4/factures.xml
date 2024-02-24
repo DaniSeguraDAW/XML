@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistafactures SYSTEM "facturas.dtd">
+<llistafactures>
+    <factura data="2024-02-24">
+        <emissor cif="12345678A">
+            <nom>Empresa ABC</nom>
+            <volum_vendes>10000</volum_vendes>
+        </emissor>
+        <pagador cif="87654321B">
+            <nom>Empresa XYZ</nom>
+            <volum_vendes>8000</volum_vendes>
+        </pagador>
+        <import>5000</import>
+    </factura>
+    <factura>
+        <emissor cif="98765432C">
+            <nom>Empresa 123</nom>
+        </emissor>
+        <pagador cif="23456789D">
+            <nom>Empresa 456</nom>
+        </pagador>
+        <import>3000</import>
+    </factura>
+</llistafactures>

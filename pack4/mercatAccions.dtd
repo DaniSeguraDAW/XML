@@ -1,0 +1,22 @@
+<!ELEMENT llistat (futur*, divises*, bons*, lletres*)>
+<!ELEMENT futur (producte, mercat?)>
+<!ELEMENT divises (nom, tipus_canvi*)>
+<!ELEMENT bons (pais_de_procedencia, valor_desitjat, valor_minim, valor_maxim)>
+<!ELEMENT lletres (pais_emissor, tipus_interes)>
+<!ELEMENT producte EMPTY>
+<!ELEMENT mercat (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT tipus_canvi (#PCDATA)>
+<!ELEMENT pais_de_procedencia (#PCDATA)>
+<!ELEMENT valor_desitjat (#PCDATA)>
+<!ELEMENT valor_minim (#PCDATA)>
+<!ELEMENT valor_maxim (#PCDATA)>
+<!ELEMENT pais_emissor (#PCDATA)>
+<!ELEMENT tipus_interes (#PCDATA)>
+<!ATTLIST futur preu CDATA #REQUIRED>
+<!ATTLIST divises preu CDATA #REQUIRED>
+<!ATTLIST divises estable (si|no) #IMPLIED>
+<!ATTLIST bons preu CDATA #REQUIRED>
+<!ATTLIST bons estable (si|no) #IMPLIED>
+<!ATTLIST lletres preu CDATA #REQUIRED>
+<!ATTLIST producte origen (Madrid|Nova_York|Frankfurt|Tòquio) #REQUIRED>
